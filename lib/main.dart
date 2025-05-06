@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:learnova/src/feature/login/presentation/view/login_view.dart';
+import 'package:learnova/src/routes/app_page.dart';
+import 'package:learnova/src/routes/app_routes.dart';
 
 void main(){
   runApp(const MyApp());
@@ -20,7 +21,8 @@ class MyApp extends StatelessWidget {
           Theme.of(context).textTheme,
         ),
       ),
-      home: LoginView(),
+      initialRoute: AppRoutes.login,
+      getPages: AppPage.pages,
     );
   }
 }
